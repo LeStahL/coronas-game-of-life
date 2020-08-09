@@ -15,7 +15,8 @@
     
 </qresource>
 <qresource prefix="/style">
-     <file alias="MainMenu.qss">C:/Demo/coronas-game-of-life/assets/styles/MainMenu.qss</file>
+     <file alias="GameWindow.qss">C:/Demo/coronas-game-of-life/assets/styles/GameWindow.qss</file>
+	 <file alias="MainMenu.qss">C:/Demo/coronas-game-of-life/assets/styles/MainMenu.qss</file>
 	
 </qresource>
 </RCC>
