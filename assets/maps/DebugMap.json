@@ -1,0 +1,31 @@
+{
+    "name":"Debug Map",
+    "size": {
+        "width":28,
+        "height":5
+    },
+    "tiles": [
+        {
+            "name":"Player",
+            "character":"@",
+            "image":":/images/player.png"
+        },
+        {
+            "name":"Floor",
+            "character":".",
+            "image":":/images/floor.png"
+        },
+        {
+            "name":"Wall",
+            "character":"#",
+            "image":":/images/wall.png"
+        }
+    ],
+    "layout": [
+        "############################",
+        "#..........................#",
+        "#.........@................#",
+        "#..........................#",
+        "############################"
+    ]
+}
