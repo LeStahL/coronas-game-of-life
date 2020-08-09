@@ -1,7 +1,11 @@
 <!DOCTYPE RCC><RCC version="1.0">
 <qresource>
-    
-    <file>C:/Demo/coronas-game-of-life/assets/maps/DebugMap.json</file>
-
+     <file>C:/Demo/coronas-game-of-life/assets/images/floor-0.png</file>
+	 <file>C:/Demo/coronas-game-of-life/assets/images/player-0.png</file>
+	 <file>C:/Demo/coronas-game-of-life/assets/images/virus_a.png</file>
+	 <file>C:/Demo/coronas-game-of-life/assets/images/wall-0.png</file>
+	
+     <file>C:/Demo/coronas-game-of-life/assets/maps/DebugMap.json</file>
+	
 </qresource>
 </RCC>

@@ -18,11 +18,11 @@ aux_source_directory("${PROJECT_SOURCE_DIR}/src" ${PROJECT_NAME}_SOURCES)
 # Compile auto-generated resource file
 foreach(IMAGE_ASSET ${IMAGE_ASSETS_FILENAMES})
     message("Added image asset: ${IMAGE_ASSET}")
-    set(IMAGE_ASSETS ${IMAGE_ASSETS} "<file>${IMAGE_ASSET}</file>\n")
+    set(IMAGE_ASSETS "${IMAGE_ASSETS} <file>${IMAGE_ASSET}</file>\n\t")
 endforeach()
 foreach(MAP_ASSET ${MAP_ASSETS_FILENAMES})
     message("Added map asset: ${MAP_ASSET}")
-    set(MAP_ASSETS ${MAP_ASSETS} "<file>${MAP_ASSET}</file>\n")
+    set(MAP_ASSETS "${MAP_ASSETS} <file>${MAP_ASSET}</file>\n\t")
 endforeach()
 configure_file("${PROJECT_SOURCE_DIR}/assets/Corona.qrc.in" "${PROJECT_SOURCE_DIR}/assets/Corona.qrc")
 
