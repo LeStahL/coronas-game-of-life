@@ -1,9 +1,11 @@
 #include "ui_mainmenu.h"
 #include "MainMenu.hpp"
 #include "GameWindow.hpp"
+#include "Map.hpp"
 
 #include <QFile>
 #include <QTextStream>
+#include <QDebug>
 
 MainMenu::MainMenu(QWidget *parent)
     : QWidget(parent)
@@ -13,7 +15,7 @@ MainMenu::MainMenu(QWidget *parent)
 
     QFile f(":/style/MainMenu.qss");
     if (!f.exists())
-        printf("Style sheet for MainMenu is not present in resources.\n");
+        qDebug() << "Style sheet for MainMenu is not present in resources.\n";
     else
     {
         f.open(QFile::ReadOnly | QFile::Text);
@@ -21,6 +23,8 @@ MainMenu::MainMenu(QWidget *parent)
         setStyleSheet(ts.readAll());
         f.close();
     }
+
+    QList<QString> availableMaps = Map::listMaps(":/maps");
 }
 
 MainMenu::~MainMenu()
