@@ -10,7 +10,7 @@ class MainMenu : public QWidget
 
     public:
     MainMenu(QWidget *parent = nullptr);
-    explicit ~MainMenu();
+    ~MainMenu();
 
     Ui::MainMenu *ui;
-}
+};
