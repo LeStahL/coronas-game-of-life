@@ -3,6 +3,7 @@
 #include <QMainWindow>
 
 #include "MainMenu.hpp"
+#include "Credits.hpp"
 
 namespace Ui { class GameWindow; }
 
@@ -14,6 +15,10 @@ class GameWindow : public QMainWindow
     GameWindow(QWidget *parent = nullptr);
     ~GameWindow();
 
-    MainMenu mainMenu;
+    void showCredits();
+    void showGame();
+    void showHighScores();
+    void showMainMenu();
+
     Ui::GameWindow *ui;
 };

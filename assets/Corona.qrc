@@ -3,8 +3,11 @@
      <file alias="MainMenuBackground.png">C:/Demo/coronas-game-of-life/assets/images/MainMenuBackground.png</file>
 	 <file alias="floor-0.png">C:/Demo/coronas-game-of-life/assets/images/floor-0.png</file>
 	 <file alias="player-0.png">C:/Demo/coronas-game-of-life/assets/images/player-0.png</file>
-	 <file alias="virus_a.png">C:/Demo/coronas-game-of-life/assets/images/virus_a.png</file>
+	 <file alias="player-trump.png">C:/Demo/coronas-game-of-life/assets/images/player-trump.png</file>
+	 <file alias="virus.png">C:/Demo/coronas-game-of-life/assets/images/virus.png</file>
 	 <file alias="wall-0.png">C:/Demo/coronas-game-of-life/assets/images/wall-0.png</file>
+	 <file alias="wall-clinker.png">C:/Demo/coronas-game-of-life/assets/images/wall-clinker.png</file>
+	 <file alias="wall-clinker2.png">C:/Demo/coronas-game-of-life/assets/images/wall-clinker2.png</file>
 	
 </qresource>
 <qresource prefix="/maps">
@@ -15,7 +18,8 @@
     
 </qresource>
 <qresource prefix="/style">
-     <file alias="GameWindow.qss">C:/Demo/coronas-game-of-life/assets/styles/GameWindow.qss</file>
+     <file alias="Credits.qss">C:/Demo/coronas-game-of-life/assets/styles/Credits.qss</file>
+	 <file alias="GameWindow.qss">C:/Demo/coronas-game-of-life/assets/styles/GameWindow.qss</file>
 	 <file alias="MainMenu.qss">C:/Demo/coronas-game-of-life/assets/styles/MainMenu.qss</file>
 	
 </qresource>

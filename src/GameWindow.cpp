@@ -9,7 +9,6 @@ GameWindow::GameWindow(QWidget *parent)
     , ui(new Ui::GameWindow)
 {
     ui->setupUi(this);
-    setCentralWidget((QWidget*)&mainMenu);
 
     QFile f(":/style/GameWindow.qss");
     if (!f.exists())
@@ -21,11 +20,32 @@ GameWindow::GameWindow(QWidget *parent)
         setStyleSheet(ts.readAll());
         f.close();
     }
-
-    update();
+    showMainMenu();
 }
 
 GameWindow::~GameWindow()
 {
     delete ui;
+}
+
+void GameWindow::showHighScores()
+{
+    // TODO: show high score widget
+}
+
+void GameWindow::showGame()
+{
+    // TODO: show game widget
+}
+
+void GameWindow::showMainMenu()
+{
+    setCentralWidget(new MainMenu(this));
+    update();
+}
+
+void GameWindow::showCredits()
+{
+    setCentralWidget(new Credits(this));
+    update();
 }

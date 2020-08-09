@@ -12,5 +12,11 @@ class MainMenu : public QWidget
     MainMenu(QWidget *parent = nullptr);
     ~MainMenu();
 
+    private slots:
+    void playClicked();
+    void highScoresClicked();
+    void creditsClicked();
+
+    private:
     Ui::MainMenu *ui;
 };

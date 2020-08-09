@@ -91,7 +91,7 @@
      <item>
       <widget class="QLabel" name="label_3">
        <property name="text">
-        <string>Credits</string>
+        <string>&lt;a href=&quot;/credits&quot;&gt;Credits&lt;/a&gt;</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -116,5 +116,27 @@
   </layout>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>label_3</sender>
+   <signal>linkActivated(QString)</signal>
+   <receiver>MainMenu</receiver>
+   <slot>creditsClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>301</x>
+     <y>181</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>199</x>
+     <y>149</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>playClicked()</slot>
+  <slot>highScoresClicked()</slot>
+  <slot>creditsClicked()</slot>
+ </slots>
 </ui>

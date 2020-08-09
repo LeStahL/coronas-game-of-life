@@ -1,5 +1,6 @@
 #include "ui_mainmenu.h"
 #include "MainMenu.hpp"
+#include "GameWindow.hpp"
 
 #include <QFile>
 #include <QTextStream>
@@ -25,4 +26,22 @@ MainMenu::MainMenu(QWidget *parent)
 MainMenu::~MainMenu()
 {
     delete ui;
+}
+
+void MainMenu::playClicked()
+{
+    GameWindow *gameWindow = (GameWindow*) parent();
+    gameWindow->showGame();
+}
+
+void MainMenu::highScoresClicked()
+{
+    GameWindow *gameWindow = (GameWindow*) parent();
+    gameWindow->showHighScores();
+}
+
+void MainMenu::creditsClicked()
+{
+    GameWindow *gameWindow = (GameWindow*) parent();
+    gameWindow->showCredits();
 }
