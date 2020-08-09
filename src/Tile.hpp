@@ -3,16 +3,20 @@
 #include <QChar>
 #include <QVariant>
 #include <QImage>
+#include <QString>
 
 class Tile
 {
     public:
-    Tile(QChar character, QImage image);
+    Tile(QChar character = QChar(' '), QImage image = QImage(""), QString imagePath = QString(""), QString name = QString("Tile"));
     ~Tile() = default;
 
     QVariant serialize();
+    void deserialize(QVariant data);
 
     QChar character;
     QImage image;
+    QString name,
+        imagePath;
     bool hasCorona;
 };

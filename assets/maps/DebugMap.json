@@ -1,5 +1,6 @@
 {
     "name":"Debug Map",
+    "background":":/images/floor-0.png",
     "size": {
         "width":28,
         "height":5
@@ -8,17 +9,17 @@
         {
             "name":"Player",
             "character":"@",
-            "image":":/images/player.png"
+            "image":":/images/player-trump.png"
         },
         {
             "name":"Floor",
             "character":".",
-            "image":":/images/floor.png"
+            "image":":/images/floor-0.png"
         },
         {
             "name":"Wall",
             "character":"#",
-            "image":":/images/wall.png"
+            "image":":/images/wall-0.png"
         }
     ],
     "layout": [

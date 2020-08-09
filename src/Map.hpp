@@ -11,5 +11,7 @@ class Map
     void initializeCorona();
     void iterateCorona();
 
+    void deserialize(QVariant data);
+
     QList<QList<Tile>> tiles;
 };
