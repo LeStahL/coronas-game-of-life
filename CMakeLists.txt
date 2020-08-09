@@ -13,6 +13,7 @@ find_package(Git QUIET)
 # Find sources and resources
 file(GLOB IMAGE_ASSETS_FILENAMES "${PROJECT_SOURCE_DIR}/assets/images/**.png")
 file(GLOB MAP_ASSETS_FILENAMES "${PROJECT_SOURCE_DIR}/assets/maps/**.json")
+file(GLOB MUSIC_ASSETS_FILENAMES "${PROJECT_SOURCE_DIR}/assets/maps/**.mp3")
 aux_source_directory("${PROJECT_SOURCE_DIR}/src" ${PROJECT_NAME}_SOURCES)
 
 # Compile auto-generated resource file
@@ -25,6 +26,11 @@ foreach(MAP_ASSET ${MAP_ASSETS_FILENAMES})
     message("Added map asset: ${MAP_ASSET}")
     get_filename_component(RELATIVE_FILENAME "${MAP_ASSET}" NAME)
     set(MAP_ASSETS "${MAP_ASSETS} <file alias=\"${RELATIVE_FILENAME}\">${MAP_ASSET}</file>\n\t")
+endforeach()
+foreach(MUSIC_ASSET ${MUSIC_ASSETS_FILENAMES})
+    message("Added music asset: ${MUSIC_ASSET}")
+    get_filename_component(RELATIVE_FILENAME "${MUSIC_ASSET}" NAME)
+    set(MAP_ASSETS "${MUSIC_ASSETS} <file alias=\"${RELATIVE_FILENAME}\">${MUSIC_ASSET}</file>\n\t")
 endforeach()
 configure_file("${PROJECT_SOURCE_DIR}/assets/Corona.qrc.in" "${PROJECT_SOURCE_DIR}/assets/Corona.qrc")
 

@@ -10,4 +10,7 @@
      <file alias="DebugMap.json">C:/Demo/coronas-game-of-life/assets/maps/DebugMap.json</file>
 	
 </qresource>
+<qresource prefix="/music">
+    
+</qresource>
 </RCC>
