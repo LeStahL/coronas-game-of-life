@@ -1,6 +1,14 @@
 <!DOCTYPE RCC><RCC version="1.0">
-<qresource>
+<qresource prefix="/images">
     ${IMAGE_ASSETS}
+</qresource>
+<qresource prefix="/maps">
     ${MAP_ASSETS}
+</qresource>
+<qresource prefix="/music">
+    ${MUSIC_ASSETS}
+</qresource>
+<qresource prefix="/style">
+    ${STYLE_ASSETS}
 </qresource>
 </RCC>
