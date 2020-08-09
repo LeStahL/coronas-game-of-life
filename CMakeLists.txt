@@ -13,7 +13,8 @@ find_package(Git QUIET)
 # Find sources and resources
 file(GLOB IMAGE_ASSETS_FILENAMES "${PROJECT_SOURCE_DIR}/assets/images/**.png")
 file(GLOB MAP_ASSETS_FILENAMES "${PROJECT_SOURCE_DIR}/assets/maps/**.json")
-file(GLOB MUSIC_ASSETS_FILENAMES "${PROJECT_SOURCE_DIR}/assets/maps/**.mp3")
+file(GLOB MUSIC_ASSETS_FILENAMES "${PROJECT_SOURCE_DIR}/assets/music/**.mp3")
+file(GLOB STYLE_ASSETS_FILENAMES "${PROJECT_SOURCE_DIR}/assets/styles/**.qss")
 aux_source_directory("${PROJECT_SOURCE_DIR}/src" ${PROJECT_NAME}_SOURCES)
 
 # Compile auto-generated resource file
@@ -30,7 +31,12 @@ endforeach()
 foreach(MUSIC_ASSET ${MUSIC_ASSETS_FILENAMES})
     message("Added music asset: ${MUSIC_ASSET}")
     get_filename_component(RELATIVE_FILENAME "${MUSIC_ASSET}" NAME)
-    set(MAP_ASSETS "${MUSIC_ASSETS} <file alias=\"${RELATIVE_FILENAME}\">${MUSIC_ASSET}</file>\n\t")
+    set(MUSIC_ASSETS "${MUSIC_ASSETS} <file alias=\"${RELATIVE_FILENAME}\">${MUSIC_ASSET}</file>\n\t")
+endforeach()
+foreach(STYLE_ASSET ${STYLE_ASSETS_FILENAMES})
+    message("Added style asset: ${STYLE_ASSET}")
+    get_filename_component(RELATIVE_FILENAME "${STYLE_ASSET}" NAME)
+    set(STYLE_ASSETS "${STYLE_ASSETS} <file alias=\"${RELATIVE_FILENAME}\">${STYLE_ASSET}</file>\n\t")
 endforeach()
 configure_file("${PROJECT_SOURCE_DIR}/assets/Corona.qrc.in" "${PROJECT_SOURCE_DIR}/assets/Corona.qrc")
 

@@ -1,6 +1,7 @@
 <!DOCTYPE RCC><RCC version="1.0">
 <qresource prefix="/images">
-     <file alias="floor-0.png">C:/Demo/coronas-game-of-life/assets/images/floor-0.png</file>
+     <file alias="MainMenuBackground.png">C:/Demo/coronas-game-of-life/assets/images/MainMenuBackground.png</file>
+	 <file alias="floor-0.png">C:/Demo/coronas-game-of-life/assets/images/floor-0.png</file>
 	 <file alias="player-0.png">C:/Demo/coronas-game-of-life/assets/images/player-0.png</file>
 	 <file alias="virus_a.png">C:/Demo/coronas-game-of-life/assets/images/virus_a.png</file>
 	 <file alias="wall-0.png">C:/Demo/coronas-game-of-life/assets/images/wall-0.png</file>
@@ -12,5 +13,9 @@
 </qresource>
 <qresource prefix="/music">
     
+</qresource>
+<qresource prefix="/style">
+     <file alias="MainMenu.qss">C:/Demo/coronas-game-of-life/assets/styles/MainMenu.qss</file>
+	
 </qresource>
 </RCC>

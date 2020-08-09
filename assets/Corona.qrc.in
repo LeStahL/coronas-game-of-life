@@ -8,4 +8,7 @@
 <qresource prefix="/music">
     ${MUSIC_ASSETS}
 </qresource>
+<qresource prefix="/style">
+    ${STYLE_ASSETS}
+</qresource>
 </RCC>
