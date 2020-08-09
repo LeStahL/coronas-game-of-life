@@ -10,10 +10,23 @@ set(CMAKE_AUTOMOC ON)
 find_package(Qt5 COMPONENTS Core Widgets Gui)
 find_package(Git QUIET)
 
-# # Make sure all source files are present to avoid obscure compiler errors.
-set(${PROJECT_NAME}_SOURCES
-    "${PROJECT_SOURCE_DIR}/src/corona.cpp"
-)
+# Find sources and resources
+file(GLOB IMAGE_ASSETS_FILENAMES "${PROJECT_SOURCE_DIR}/assets/images/**.png")
+file(GLOB MAP_ASSETS_FILENAMES "${PROJECT_SOURCE_DIR}/assets/maps/**.json")
+aux_source_directory("${PROJECT_SOURCE_DIR}/src" ${PROJECT_NAME}_SOURCES)
+
+# Compile auto-generated resource file
+foreach(IMAGE_ASSET ${IMAGE_ASSETS_FILENAMES})
+    message("Added image asset: ${IMAGE_ASSET}")
+    set(IMAGE_ASSETS ${IMAGE_ASSETS} "<file>${IMAGE_ASSET}</file>\n")
+endforeach()
+foreach(MAP_ASSET ${MAP_ASSETS_FILENAMES})
+    message("Added map asset: ${MAP_ASSET}")
+    set(MAP_ASSETS ${MAP_ASSETS} "<file>${MAP_ASSET}</file>\n")
+endforeach()
+configure_file("${PROJECT_SOURCE_DIR}/assets/Corona.qrc.in" "${PROJECT_SOURCE_DIR}/assets/Corona.qrc")
+
+set(${PROJECT_NAME}_SOURCES ${${PROJECT_NAME}_SOURCES} "${PROJECT_SOURCE_DIR}/assets/Corona.qrc")
 foreach(FILE ${${PROJECT_NAME}_SOURCES})
     if(NOT EXISTS "${FILE}")
         message(FATAL_ERROR "File ${FILE} does not exist.")
