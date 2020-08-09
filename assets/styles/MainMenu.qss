@@ -1,5 +1,6 @@
-QFrame, QLabel, QToolTip {
+QLabel#label {
     border: 2px solid green;
     border-radius: 4px;
     padding: 2px;
+    background-image: url(:/images/MainMenuBackground.png)
 }
