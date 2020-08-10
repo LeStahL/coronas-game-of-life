@@ -7,7 +7,7 @@ set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTORCC ON)
 set(CMAKE_AUTOMOC ON)
 
-find_package(Qt5 COMPONENTS Core Widgets Gui)
+find_package(Qt5 COMPONENTS Core Widgets Gui Multimedia)
 find_package(Git QUIET)
 
 # Find sources and resources
@@ -60,6 +60,7 @@ set(LIBRARIES
     Qt5::Core
     Qt5::Widgets
     Qt5::Gui
+    Qt5::Multimedia
 )
 target_link_libraries(${PROJECT_NAME} ${LIBRARIES})
 

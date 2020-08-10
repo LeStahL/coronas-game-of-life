@@ -10,6 +10,8 @@
 MainMenu::MainMenu(QWidget *parent)
     : QWidget(parent)
     , ui(new Ui::MainMenu)
+    , mediaPlayer(new QMediaPlayer)
+    , mediaPlaylist(new QMediaPlaylist)
 {
     ui->setupUi(this);
 
@@ -25,11 +27,20 @@ MainMenu::MainMenu(QWidget *parent)
     }
 
     QList<QString> availableMaps = Map::listMaps(":/maps");
+    ui->comboBox->addItems(availableMaps);
+
+    mediaPlaylist->addMedia(QUrl("qrc:/music/CoronaGoL.mp3"));
+    mediaPlaylist->setPlaybackMode(QMediaPlaylist::Loop);
+
+    mediaPlayer->setPlaylist(mediaPlaylist);
+    mediaPlayer->play();
 }
 
 MainMenu::~MainMenu()
 {
     delete ui;
+    mediaPlayer->stop();
+    delete mediaPlayer;
 }
 
 void MainMenu::playClicked()

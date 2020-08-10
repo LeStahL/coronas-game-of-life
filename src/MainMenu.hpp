@@ -1,6 +1,8 @@
 #pragma once
 
 #include <QWidget>
+#include <QMediaPlayer>
+#include <QMediaPlaylist>
 
 namespace Ui { class MainMenu; }
 
@@ -19,4 +21,6 @@ class MainMenu : public QWidget
 
     private:
     Ui::MainMenu *ui;
+    QMediaPlayer *mediaPlayer;
+    QMediaPlaylist *mediaPlaylist;
 };
