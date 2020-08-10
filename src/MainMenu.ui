@@ -71,7 +71,7 @@
      <item>
       <widget class="QLabel" name="label_2">
        <property name="text">
-        <string>Play Level</string>
+        <string>&lt;a href=&quot;play&quot;&gt;Play Level&lt;/a&gt;</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -81,7 +81,7 @@
      <item>
       <widget class="QLabel" name="label_5">
        <property name="text">
-        <string>High Scores</string>
+        <string>&lt;a href=&quot;scores&quot;&gt;High Scores&lt;/a&gt;</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -126,6 +126,22 @@
     <hint type="sourcelabel">
      <x>301</x>
      <y>181</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>199</x>
+     <y>149</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>label_2</sender>
+   <signal>linkActivated(QString)</signal>
+   <receiver>MainMenu</receiver>
+   <slot>playClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>301</x>
+     <y>143</y>
     </hint>
     <hint type="destinationlabel">
      <x>199</x>

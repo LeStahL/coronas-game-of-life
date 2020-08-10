@@ -41,12 +41,13 @@ MainMenu::~MainMenu()
     delete ui;
     mediaPlayer->stop();
     delete mediaPlayer;
+    delete mediaPlaylist;
 }
 
 void MainMenu::playClicked()
 {
     GameWindow *gameWindow = (GameWindow*) parent();
-    gameWindow->showGame();
+    gameWindow->showGame(ui->comboBox->currentText());
 }
 
 void MainMenu::highScoresClicked()

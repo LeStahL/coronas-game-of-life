@@ -30,6 +30,7 @@
 </qresource>
 <qresource prefix="/style">
      <file alias="Credits.qss">C:/Demo/coronas-game-of-life/assets/styles/Credits.qss</file>
+	 <file alias="GameWidget.qss">C:/Demo/coronas-game-of-life/assets/styles/GameWidget.qss</file>
 	 <file alias="GameWindow.qss">C:/Demo/coronas-game-of-life/assets/styles/GameWindow.qss</file>
 	 <file alias="MainMenu.qss">C:/Demo/coronas-game-of-life/assets/styles/MainMenu.qss</file>
 	

@@ -4,6 +4,7 @@
 
 #include "MainMenu.hpp"
 #include "Credits.hpp"
+#include "GameWidget.hpp"
 
 namespace Ui { class GameWindow; }
 
@@ -16,7 +17,7 @@ class GameWindow : public QMainWindow
     ~GameWindow();
 
     void showCredits();
-    void showGame();
+    void showGame(QString mapUrl);
     void showHighScores();
     void showMainMenu();
 

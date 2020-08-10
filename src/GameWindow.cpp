@@ -33,9 +33,10 @@ void GameWindow::showHighScores()
     // TODO: show high score widget
 }
 
-void GameWindow::showGame()
+void GameWindow::showGame(QString mapUrl)
 {
-    // TODO: show game widget
+    setCentralWidget(new GameWidget(mapUrl, this));
+    update();
 }
 
 void GameWindow::showMainMenu()

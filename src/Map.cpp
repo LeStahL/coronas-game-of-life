@@ -2,6 +2,7 @@
 
 #include <QDirIterator>
 #include <QDebug>
+#include <QJsonDocument>
 
 Map::Map(QString filePath)
 {
@@ -15,6 +16,8 @@ Map::Map(QString filePath)
         deserialize(QVariant(ts.readAll()));
         f.close();
     }
+
+
 }
 
 
@@ -35,5 +38,6 @@ QVariant Map::serialize()
 
 void Map::deserialize(QVariant data)
 {
-
+    QJsonDocument jsonDocument = QJsonDocument::fromJson(data.toByteArray());
+    qDebug() << jsonDocument;
 }
