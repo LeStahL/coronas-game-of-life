@@ -1,0 +1,28 @@
+{
+    "name":"Actual Map",
+    "background":":/images/floor-0.png",
+    "tiles": [
+        {
+            "name":"Player",
+            "character":"@",
+            "image":":/images/player-trump.png"
+        },
+        {
+            "name":"Floor",
+            "character":".",
+            "image":":/images/floor-0.png"
+        },
+        {
+            "name":"Wall",
+            "character":"#",
+            "image":":/images/wall-0.png"
+        }
+    ],
+    "layout": [
+        "############################",
+        "#.@........................#",
+        "#.........@................#",
+        "#......................@...#",
+        "############################"
+    ]
+}

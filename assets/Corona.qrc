@@ -11,8 +11,11 @@
 	 <file alias="player-blm.png">C:/Demo/coronas-game-of-life/assets/images/player-blm.png</file>
 	 <file alias="player-elvis.png">C:/Demo/coronas-game-of-life/assets/images/player-elvis.png</file>
 	 <file alias="player-girl.png">C:/Demo/coronas-game-of-life/assets/images/player-girl.png</file>
+	 <file alias="player-girl2.png">C:/Demo/coronas-game-of-life/assets/images/player-girl2.png</file>
 	 <file alias="player-merkel.png">C:/Demo/coronas-game-of-life/assets/images/player-merkel.png</file>
 	 <file alias="player-salafist.png">C:/Demo/coronas-game-of-life/assets/images/player-salafist.png</file>
+	 <file alias="player-skeleton.png">C:/Demo/coronas-game-of-life/assets/images/player-skeleton.png</file>
+	 <file alias="player-skeleton2.png">C:/Demo/coronas-game-of-life/assets/images/player-skeleton2.png</file>
 	 <file alias="player-trump.png">C:/Demo/coronas-game-of-life/assets/images/player-trump.png</file>
 	 <file alias="player-winnie.png">C:/Demo/coronas-game-of-life/assets/images/player-winnie.png</file>
 	 <file alias="player-xi.png">C:/Demo/coronas-game-of-life/assets/images/player-xi.png</file>
@@ -26,7 +29,8 @@
 	
 </qresource>
 <qresource prefix="/maps">
-     <file alias="DebugMap.json">C:/Demo/coronas-game-of-life/assets/maps/DebugMap.json</file>
+     <file alias="ActualMap.json">C:/Demo/coronas-game-of-life/assets/maps/ActualMap.json</file>
+	 <file alias="DebugMap.json">C:/Demo/coronas-game-of-life/assets/maps/DebugMap.json</file>
 	
 </qresource>
 <qresource prefix="/music">
