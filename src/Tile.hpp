@@ -8,14 +8,14 @@
 class Tile
 {
     public:
-    Tile(QChar character = QChar(' '), QImage image = QImage(""), QString imagePath = QString(""), QString name = QString("Tile"));
+    Tile(QChar character = QChar(' '), QImage *image = nullptr, QString imagePath = QString(""), QString name = QString("Tile"));
     ~Tile() = default;
 
     QVariant serialize();
     void deserialize(QVariant data);
 
     QChar character;
-    QImage image;
+    QImage *image;
     QString name,
         imagePath;
     bool hasCorona;

@@ -3,7 +3,7 @@
 #include <QJsonObject>
 #include <QDebug>
 
-Tile::Tile(QChar _character, QImage _image, QString _imagePath, QString _name)
+Tile::Tile(QChar _character, QImage *_image, QString _imagePath, QString _name)
     : character(_character)
     , image(_image)
     , hasCorona(false)
@@ -28,6 +28,7 @@ void Tile::deserialize(QVariant data)
     character = QChar(json["character"].toString()[0]);
     imagePath = json["image"].toString();
 
-    image = QImage(imagePath);
+    if(image != nullptr) delete image;
+    image = new QImage(imagePath);
     hasCorona = false;
 }

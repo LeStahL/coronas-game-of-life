@@ -1,5 +1,7 @@
 #include "MapModel.hpp"
 
+#include <QPixmap>
+
 MapModel::MapModel(Map *_map, QObject *parent)
     : QAbstractTableModel(parent)
     , map(_map)
@@ -22,9 +24,11 @@ int MapModel::columnCount(const QModelIndex &parent) const
 
 QVariant MapModel::data(const QModelIndex &index, int role) const
 {
-    if(role == Qt::DisplayRole)
+    if(role == Qt::DecorationRole)
     {
-        return QVariant(map->tileAt(index.column(), index.row())->image);
+        return QVariant(*map->tileAt(index.column(), index.row())->image);
+        // QPixmap pixmap = QPixmap::fromImage(*(map->tileAt(index.column(), index.row())->image));
+        // return QVariant(pixmap);
     }
     return QVariant();
 }
