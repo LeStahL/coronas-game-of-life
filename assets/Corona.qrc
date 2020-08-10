@@ -2,12 +2,22 @@
 <qresource prefix="/images">
      <file alias="MainMenuBackground.png">C:/Demo/coronas-game-of-life/assets/images/MainMenuBackground.png</file>
 	 <file alias="floor-0.png">C:/Demo/coronas-game-of-life/assets/images/floor-0.png</file>
+	 <file alias="floor-cement.png">C:/Demo/coronas-game-of-life/assets/images/floor-cement.png</file>
+	 <file alias="floor-clinker.png">C:/Demo/coronas-game-of-life/assets/images/floor-clinker.png</file>
+	 <file alias="floor-grassland.png">C:/Demo/coronas-game-of-life/assets/images/floor-grassland.png</file>
+	 <file alias="floor-rainbow.png">C:/Demo/coronas-game-of-life/assets/images/floor-rainbow.png</file>
 	 <file alias="player-0.png">C:/Demo/coronas-game-of-life/assets/images/player-0.png</file>
+	 <file alias="player-merkel.png">C:/Demo/coronas-game-of-life/assets/images/player-merkel.png</file>
 	 <file alias="player-trump.png">C:/Demo/coronas-game-of-life/assets/images/player-trump.png</file>
+	 <file alias="player-winnie.png">C:/Demo/coronas-game-of-life/assets/images/player-winnie.png</file>
+	 <file alias="player-xi.png">C:/Demo/coronas-game-of-life/assets/images/player-xi.png</file>
 	 <file alias="virus.png">C:/Demo/coronas-game-of-life/assets/images/virus.png</file>
 	 <file alias="wall-0.png">C:/Demo/coronas-game-of-life/assets/images/wall-0.png</file>
+	 <file alias="wall-cement.png">C:/Demo/coronas-game-of-life/assets/images/wall-cement.png</file>
 	 <file alias="wall-clinker.png">C:/Demo/coronas-game-of-life/assets/images/wall-clinker.png</file>
 	 <file alias="wall-clinker2.png">C:/Demo/coronas-game-of-life/assets/images/wall-clinker2.png</file>
+	 <file alias="wall-grassland.png">C:/Demo/coronas-game-of-life/assets/images/wall-grassland.png</file>
+	 <file alias="wall-rainbow.png">C:/Demo/coronas-game-of-life/assets/images/wall-rainbow.png</file>
 	
 </qresource>
 <qresource prefix="/maps">
@@ -15,7 +25,8 @@
 	
 </qresource>
 <qresource prefix="/music">
-    
+     <file alias="CoronaGoL.mp3">C:/Demo/coronas-game-of-life/assets/music/CoronaGoL.mp3</file>
+	
 </qresource>
 <qresource prefix="/style">
      <file alias="Credits.qss">C:/Demo/coronas-game-of-life/assets/styles/Credits.qss</file>
