@@ -1,0 +1,43 @@
+<!DOCTYPE RCC><RCC version="1.0">
+<qresource prefix="/images">
+     <file alias="MainMenuBackground.png">C:/Demo/coronas-game-of-life/assets/images/MainMenuBackground.png</file>
+	 <file alias="floor-0.png">C:/Demo/coronas-game-of-life/assets/images/floor-0.png</file>
+	 <file alias="floor-cement.png">C:/Demo/coronas-game-of-life/assets/images/floor-cement.png</file>
+	 <file alias="floor-clinker.png">C:/Demo/coronas-game-of-life/assets/images/floor-clinker.png</file>
+	 <file alias="floor-grassland.png">C:/Demo/coronas-game-of-life/assets/images/floor-grassland.png</file>
+	 <file alias="floor-rainbow.png">C:/Demo/coronas-game-of-life/assets/images/floor-rainbow.png</file>
+	 <file alias="player-0.png">C:/Demo/coronas-game-of-life/assets/images/player-0.png</file>
+	 <file alias="player-3tagebart.png">C:/Demo/coronas-game-of-life/assets/images/player-3tagebart.png</file>
+	 <file alias="player-blm.png">C:/Demo/coronas-game-of-life/assets/images/player-blm.png</file>
+	 <file alias="player-elvis.png">C:/Demo/coronas-game-of-life/assets/images/player-elvis.png</file>
+	 <file alias="player-girl.png">C:/Demo/coronas-game-of-life/assets/images/player-girl.png</file>
+	 <file alias="player-merkel.png">C:/Demo/coronas-game-of-life/assets/images/player-merkel.png</file>
+	 <file alias="player-salafist.png">C:/Demo/coronas-game-of-life/assets/images/player-salafist.png</file>
+	 <file alias="player-trump.png">C:/Demo/coronas-game-of-life/assets/images/player-trump.png</file>
+	 <file alias="player-winnie.png">C:/Demo/coronas-game-of-life/assets/images/player-winnie.png</file>
+	 <file alias="player-xi.png">C:/Demo/coronas-game-of-life/assets/images/player-xi.png</file>
+	 <file alias="virus.png">C:/Demo/coronas-game-of-life/assets/images/virus.png</file>
+	 <file alias="wall-0.png">C:/Demo/coronas-game-of-life/assets/images/wall-0.png</file>
+	 <file alias="wall-cement.png">C:/Demo/coronas-game-of-life/assets/images/wall-cement.png</file>
+	 <file alias="wall-clinker.png">C:/Demo/coronas-game-of-life/assets/images/wall-clinker.png</file>
+	 <file alias="wall-clinker2.png">C:/Demo/coronas-game-of-life/assets/images/wall-clinker2.png</file>
+	 <file alias="wall-grassland.png">C:/Demo/coronas-game-of-life/assets/images/wall-grassland.png</file>
+	 <file alias="wall-rainbow.png">C:/Demo/coronas-game-of-life/assets/images/wall-rainbow.png</file>
+	
+</qresource>
+<qresource prefix="/maps">
+     <file alias="DebugMap.json">C:/Demo/coronas-game-of-life/assets/maps/DebugMap.json</file>
+	
+</qresource>
+<qresource prefix="/music">
+     <file alias="CoronaGoL.mp3">C:/Demo/coronas-game-of-life/assets/music/CoronaGoL.mp3</file>
+	
+</qresource>
+<qresource prefix="/style">
+     <file alias="Credits.qss">C:/Demo/coronas-game-of-life/assets/styles/Credits.qss</file>
+	 <file alias="GameWidget.qss">C:/Demo/coronas-game-of-life/assets/styles/GameWidget.qss</file>
+	 <file alias="GameWindow.qss">C:/Demo/coronas-game-of-life/assets/styles/GameWindow.qss</file>
+	 <file alias="MainMenu.qss">C:/Demo/coronas-game-of-life/assets/styles/MainMenu.qss</file>
+	
+</qresource>
+</RCC>
