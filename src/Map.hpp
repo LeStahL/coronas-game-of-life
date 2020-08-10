@@ -26,6 +26,7 @@ class Map
     void iterateCorona();
 
     Tile *tileAt(int x, int y);
+    Tile *tileFromChar(QChar character);
 
     QVariant serialize();
     void deserialize(QVariant data);

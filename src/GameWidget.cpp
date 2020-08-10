@@ -6,6 +6,7 @@ GameWidget::GameWidget(QString mapUrl, QWidget *parent)
     , ui(new Ui::GameWidget)
     , mediaPlayer(new QMediaPlayer)
     , mediaPlaylist(new QMediaPlaylist)
+    , map(new Map(mapUrl))
 {
     ui->setupUi(this);
 
@@ -25,6 +26,11 @@ GameWidget::GameWidget(QString mapUrl, QWidget *parent)
 
     mediaPlayer->setPlaylist(mediaPlaylist);
     mediaPlayer->play();
+    
+    mapModel = new MapModel(map, this);
+
+    ui->tableView->setModel(mapModel);
+    update();
 }
 
 GameWidget::~GameWidget()
@@ -33,4 +39,6 @@ GameWidget::~GameWidget()
     mediaPlayer->stop();
     delete mediaPlayer;
     delete mediaPlaylist;
+    delete map;
+    delete mapModel;
 }

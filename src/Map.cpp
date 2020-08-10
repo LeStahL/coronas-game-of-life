@@ -65,3 +65,22 @@ void Map::deserialize(QVariant data)
         tiles.push_back(t);
     }
 }
+
+Tile *Map::tileFromChar(QChar character)
+{
+    for(int i=0; i<tiles.size(); ++i)
+    {
+        if(tiles.at(i).character == character) 
+            return (Tile*)&(tiles.at(i));
+    }
+    return nullptr;
+}
+
+Tile *Map::tileAt(int x, int y)
+{
+    if(x >= size.width() || x < 0) return nullptr;
+    if(y >= size.height() || y < 0) return nullptr;
+
+    QChar character = layout.at(y)[x];
+    return tileFromChar(character);
+}

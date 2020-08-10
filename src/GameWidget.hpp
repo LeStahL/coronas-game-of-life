@@ -5,6 +5,7 @@
 #include <QMediaPlaylist>
 
 #include "Map.hpp"
+#include "MapModel.hpp"
 
 namespace Ui{ class GameWidget; }
 
@@ -20,6 +21,7 @@ class GameWidget : public QWidget
 
     private:
     Map *map;
+    MapModel *mapModel;
     Ui::GameWidget *ui;
     QMediaPlayer *mediaPlayer;
     QMediaPlaylist *mediaPlaylist;
