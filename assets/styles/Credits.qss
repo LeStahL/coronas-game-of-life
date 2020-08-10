@@ -1,5 +1,19 @@
-QLabel {
-    border: 2px solid green;
-    border-radius: 4px;
-    padding: 2px;
+QLabel, QWidget {
+    background-color: black;
+    background: black;
+    border:none;
+}
+
+QLabel, QFrame {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 lime, stop:1 green);
+    selection-background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 orange, stop:1 orangered);
+    font: bold 30px;
+    color: black;
+    selection-color: black;
+    padding: 10px;
+}
+
+QLabel:hover, QLabel:link, QComboBox:hover, QComboBox:on {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 orange, stop:1 orangered);
+    color: black;
 }
