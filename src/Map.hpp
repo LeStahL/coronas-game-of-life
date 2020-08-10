@@ -25,8 +25,15 @@ class Map
     void initializeCorona();
     void iterateCorona();
 
+    Tile *tileAt(int x, int y);
+
     QVariant serialize();
     void deserialize(QVariant data);
 
-    QList<QList<Tile>> tiles;
+    QList<Tile> tiles;
+    QList<QString> layout;
+
+    QString name;
+    QImage background;
+    QSize size;
 };

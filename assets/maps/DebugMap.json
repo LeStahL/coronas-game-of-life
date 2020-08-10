@@ -1,10 +1,6 @@
 {
     "name":"Debug Map",
     "background":":/images/floor-0.png",
-    "size": {
-        "width":28,
-        "height":5
-    },
     "tiles": [
         {
             "name":"Player",
