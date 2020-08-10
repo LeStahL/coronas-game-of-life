@@ -19,6 +19,10 @@ class GameWidget : public QWidget
 
     private slots:
     void cyclePlayers();
+    void moveRight();
+    void moveLeft();
+    void moveUp();
+    void moveDown();
 
     private:
     Map *map;

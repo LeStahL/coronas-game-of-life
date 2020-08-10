@@ -23,10 +23,17 @@ class Map
     }
 
     void nextPlayer();
+    void moveCurrentPlayerUp();
+    void moveCurrentPlayerRight();
+    void moveCurrentPlayerLeft();
+    void moveCurrentPlayerDown();
 
     void initializeCorona();
     void iterateCorona();
 
+    QChar getPlayerCharacter();
+    QChar getFloorCharacter();
+    void setCharAt(int x, int y, QChar character);
     Tile *tileAt(int x, int y);
     Tile *tileFromChar(QChar character);
     QList<QPoint> playerCoordinates();
@@ -41,4 +48,6 @@ class Map
     QImage background;
     QSize size;
     QPoint activePlayerCoordinate;
+    QChar playerCharacter,
+        floorCharacter;
 };

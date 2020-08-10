@@ -32,6 +32,10 @@ GameWidget::GameWidget(QString mapUrl, QWidget *parent)
     mapModel = new MapModel(map, this);
 
     this->addAction(ui->actionCycle);
+    this->addAction(ui->actionUp);
+    this->addAction(ui->actionDown);
+    this->addAction(ui->actionRight);
+    this->addAction(ui->actionLeft);
 
     ui->tableView->setModel(mapModel);
     update();
@@ -50,5 +54,29 @@ GameWidget::~GameWidget()
 void GameWidget::cyclePlayers()
 {
     map->nextPlayer();
+    mapModel->update();
+}
+
+void GameWidget::moveUp()
+{
+    map->moveCurrentPlayerUp();
+    mapModel->update();
+}
+
+void GameWidget::moveRight()
+{
+    map->moveCurrentPlayerRight();
+    mapModel->update();
+}
+
+void GameWidget::moveLeft()
+{
+    map->moveCurrentPlayerLeft();
+    mapModel->update();
+}
+
+void GameWidget::moveDown()
+{
+    map->moveCurrentPlayerDown();
     mapModel->update();
 }

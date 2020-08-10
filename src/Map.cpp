@@ -67,6 +67,10 @@ void Map::deserialize(QVariant data)
         t.deserialize(tilesJson.at(i).toVariant());
         tiles.push_back(t);
     }
+
+    // update player and floor character 
+    playerCharacter = getPlayerCharacter();
+    floorCharacter = getFloorCharacter();
 }
 
 Tile *Map::tileFromChar(QChar character)
@@ -88,16 +92,30 @@ Tile *Map::tileAt(int x, int y)
     return tileFromChar(character);
 }
 
-QList<QPoint> Map::playerCoordinates()
+QChar Map::getPlayerCharacter()
 {
-    // Find player char
     QChar playerCharacter;
     for(int i=0; i<tiles.size(); ++i)
     {
         if(tiles.at(i).name == "Player")
             playerCharacter = tiles.at(i).character;
     }
+    return playerCharacter;
+}
 
+QChar Map::getFloorCharacter()
+{
+    QChar playerCharacter;
+    for(int i=0; i<tiles.size(); ++i)
+    {
+        if(tiles.at(i).name == "Floor")
+            playerCharacter = tiles.at(i).character;
+    }
+    return playerCharacter;
+}
+
+QList<QPoint> Map::playerCoordinates()
+{
     // Use player char to determine player coordinates
     QList<QPoint> coordinates;
     for(int i=0; i<size.width(); ++i)
@@ -118,4 +136,77 @@ void Map::nextPlayer()
     int index = availablePlayerCoordinates.indexOf(activePlayerCoordinate);
     index = (index + 1) % availablePlayerCoordinates.size();
     activePlayerCoordinate = availablePlayerCoordinates[index];
+}
+
+void Map::moveCurrentPlayerUp()
+{
+    // Check if player can move there
+    QPoint newLocation = QPoint(activePlayerCoordinate.x(), activePlayerCoordinate.y()-1);
+    if(newLocation.y() < 0) return;
+    if(newLocation.y() >= size.height()) return;
+    
+    Tile *newTile = tileAt(newLocation.x(), newLocation.y());
+    if(newTile->name == "Wall")return;
+    if(newTile->name == "Player")return;
+
+    // Move player there
+    setCharAt(activePlayerCoordinate.x(), activePlayerCoordinate.y(), floorCharacter);
+    setCharAt(newLocation.x(), newLocation.y(), playerCharacter);
+    activePlayerCoordinate = newLocation;
+}
+
+void Map::moveCurrentPlayerRight()
+{
+    // Check if player can move there
+    QPoint newLocation = QPoint(activePlayerCoordinate.x()+1, activePlayerCoordinate.y());
+    if(newLocation.x() < 0) return;
+    if(newLocation.x() >= size.width()) return;
+    
+    Tile *newTile = tileAt(newLocation.x(), newLocation.y());
+    if(newTile->name == "Wall")return;
+    if(newTile->name == "Player")return;
+
+    // Move player there
+    setCharAt(activePlayerCoordinate.x(), activePlayerCoordinate.y(), floorCharacter);
+    setCharAt(newLocation.x(), newLocation.y(), playerCharacter);
+    activePlayerCoordinate = newLocation;
+}
+
+void Map::moveCurrentPlayerDown()
+{
+    // Check if player can move there
+    QPoint newLocation = QPoint(activePlayerCoordinate.x(), activePlayerCoordinate.y()+1);
+    if(newLocation.y() < 0) return;
+    if(newLocation.y() >= size.height()) return;
+    
+    Tile *newTile = tileAt(newLocation.x(), newLocation.y());
+    if(newTile->name == "Wall")return;
+    if(newTile->name == "Player")return;
+
+    // Move player there
+    setCharAt(activePlayerCoordinate.x(), activePlayerCoordinate.y(), floorCharacter);
+    setCharAt(newLocation.x(), newLocation.y(), playerCharacter);
+    activePlayerCoordinate = newLocation;
+}
+
+void Map::moveCurrentPlayerLeft()
+{
+    // Check if player can move there
+    QPoint newLocation = QPoint(activePlayerCoordinate.x()-1, activePlayerCoordinate.y());
+    if(newLocation.x() < 0) return;
+    if(newLocation.x() >= size.width()) return;
+    
+    Tile *newTile = tileAt(newLocation.x(), newLocation.y());
+    if(newTile->name == "Wall")return;
+    if(newTile->name == "Player")return;
+
+    // Move player there
+    setCharAt(activePlayerCoordinate.x(), activePlayerCoordinate.y(), floorCharacter);
+    setCharAt(newLocation.x(), newLocation.y(), playerCharacter);
+    activePlayerCoordinate = newLocation;
+}
+
+void Map::setCharAt(int x, int y, QChar character)
+{
+    layout[y][x] = character;
 }
