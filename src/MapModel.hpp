@@ -17,5 +17,7 @@ class MapModel : public QAbstractTableModel
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
     // QVariant headerData(int section, Qt::Orientation orientation, int role = Qt::DisplayRole) const override;
 
+    void update();
+
     Map *map;
 };

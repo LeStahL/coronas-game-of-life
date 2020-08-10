@@ -22,11 +22,14 @@ class Map
         return maps;
     }
 
+    void nextPlayer();
+
     void initializeCorona();
     void iterateCorona();
 
     Tile *tileAt(int x, int y);
     Tile *tileFromChar(QChar character);
+    QList<QPoint> playerCoordinates();
 
     QVariant serialize();
     void deserialize(QVariant data);
@@ -37,4 +40,5 @@ class Map
     QString name;
     QImage background;
     QSize size;
+    QPoint activePlayerCoordinate;
 };

@@ -1,6 +1,8 @@
 #include "ui_gamewidget.h"
 #include "GameWidget.hpp"
 
+#include <QAction>
+
 GameWidget::GameWidget(QString mapUrl, QWidget *parent)
     : QWidget(parent)
     , ui(new Ui::GameWidget)
@@ -26,8 +28,10 @@ GameWidget::GameWidget(QString mapUrl, QWidget *parent)
 
     mediaPlayer->setPlaylist(mediaPlaylist);
     mediaPlayer->play();
-    
+
     mapModel = new MapModel(map, this);
+
+    this->addAction(ui->actionCycle);
 
     ui->tableView->setModel(mapModel);
     update();
@@ -41,4 +45,10 @@ GameWidget::~GameWidget()
     delete mediaPlaylist;
     delete map;
     delete mapModel;
+}
+
+void GameWidget::cyclePlayers()
+{
+    map->nextPlayer();
+    mapModel->update();
 }

@@ -18,6 +18,7 @@ class GameWidget : public QWidget
     ~GameWidget();
 
     private slots:
+    void cyclePlayers();
 
     private:
     Map *map;

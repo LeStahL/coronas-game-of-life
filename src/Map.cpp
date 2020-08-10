@@ -19,6 +19,9 @@ Map::Map(QString filePath)
         deserialize(QVariant(ts.readAll()));
         f.close();
     }
+
+    QList<QPoint> availablePlayerCoordinates = playerCoordinates();
+    activePlayerCoordinate = availablePlayerCoordinates.at(0);
 }
 
 
@@ -83,4 +86,36 @@ Tile *Map::tileAt(int x, int y)
 
     QChar character = layout.at(y)[x];
     return tileFromChar(character);
+}
+
+QList<QPoint> Map::playerCoordinates()
+{
+    // Find player char
+    QChar playerCharacter;
+    for(int i=0; i<tiles.size(); ++i)
+    {
+        if(tiles.at(i).name == "Player")
+            playerCharacter = tiles.at(i).character;
+    }
+
+    // Use player char to determine player coordinates
+    QList<QPoint> coordinates;
+    for(int i=0; i<size.width(); ++i)
+    {
+        for(int j=0; j<size.height(); ++j)
+        {
+            if(layout.at(j)[i] == playerCharacter)
+                coordinates << QPoint(i, j);
+        }
+    }
+    return coordinates;
+}
+
+void Map::nextPlayer()
+{
+    QList<QPoint> availablePlayerCoordinates = playerCoordinates();
+
+    int index = availablePlayerCoordinates.indexOf(activePlayerCoordinate);
+    index = (index + 1) % availablePlayerCoordinates.size();
+    activePlayerCoordinate = availablePlayerCoordinates[index];
 }
